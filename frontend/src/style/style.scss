@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+$yellow: #F4E041;
+$blue: #00BDD3;
+$light-gray: #F8F8F8;
+$error: #CB3D40;
+
+* {
+  font-family: 'Nunito', sans-serif;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 40px;
+}
+
+body, button, input {
+  font-weight: 400;
+  line-height: 26px;
+  font-size: 16px;
+  color: rgba($color: #000000, $alpha: 0.87);
+}
+
+button:not([upload]) {
+  width: 100px;
+  height: 34px;
+  border-radius: 80px;
+  background-color: $yellow;
+  border-color: transparent;
+  cursor: pointer;
+
+  &:hover:not(:disabled) {
+    background-color: #FFE302;
+  }
+
+  &:disabled {
+    cursor: auto;
+    color: rgba($color: #ffffff, $alpha: 0.87);
+    background-color: #B4B4B4;
+  }  
+}
+
+.input-group {
+  display: flex;
+  width: 100%;
+  height: 54px;
+
+  button[upload] {
+    border: 1px solid rgba(0, 0, 0, 0.87);
+    border-radius: 4px 0px 0px 4px;
+    padding: 0px 15px;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  &>:not(:first-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: 0px !important;
+
+    &:disabled {
+      color: rgba(0, 0, 0, 0.87);
+    }
+  }
+
+  &[error="true"] {
+    button[upload], input {
+      border: 2px solid $error;
+    }
+  }
+}
+
+input {
+  flex: auto;
+  padding: 14px 16px 14px 16px;
+  background-color: transparent;
+  border: 1px solid #D0CFCF;
+  border-radius: 4px;
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+.error-message {
+  display: block;
+  font-size: 12px;
+  line-height: 14px;
+  margin: 4px 14px 0px 14px;
+  color: $error;
+}
