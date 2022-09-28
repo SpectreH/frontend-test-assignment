@@ -11,7 +11,7 @@
           <button type="button" upload>Upload</button>
           <input placeholder="Upload your photo" disabled>
         </div>
-        <label class="error-message">Error text</label>
+        <label class="helper-message error">Error text</label>
       </div>   
 
       <div class="input-group upload" error="false">
@@ -24,11 +24,14 @@
           <label class="floating-label">Label</label>         
           <input placeholder="Label">
         </div>
-        <label class="error-message">Error text</label>              
+        <label class="helper-message error">Error text</label>              
       </div>
         
 
-      <input placeholder="Upload your photo">      
+      <div>
+        <input placeholder="Upload your photo">     
+        <label class="helper-message">Helper text</label>
+      </div>   
     </div>
 
     <p>Normal</p>

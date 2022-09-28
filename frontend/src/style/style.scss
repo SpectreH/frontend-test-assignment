@@ -43,7 +43,7 @@ button:not([upload]) {
 
 input {
   flex: auto;
-  padding: 14px 16px 14px 16px;
+  padding: 14px;
   background-color: transparent;
   border: 1px solid #D0CFCF;
   border-radius: 4px;
@@ -62,7 +62,7 @@ input {
     button[upload] {
       border: 1px solid rgba(0, 0, 0, 0.87);
       border-radius: 4px 0px 0px 4px;
-      padding: 0px 15px;
+      padding: 0px 14px;
       background-color: transparent;
       cursor: pointer;
     }
@@ -81,7 +81,7 @@ input {
   label.floating-label {
     position: absolute;
     right: auto;
-    transform: translate3d(12px, -13px, 0px) scale(.75);
+    transform: translate3d(11px, -13px, 0px) scale(.75);
     z-index: 3
   }
 
@@ -108,10 +108,14 @@ input {
   }  
 }
 
-.error-message {
+.helper-message {
   display: block;
   font-size: 12px;
   line-height: 14px;
-  margin: 4px 14px 0px 14px;
-  color: $error;
+  margin: 4px 16px 0px 16px;
+  color: #7E7E7E;
+
+  &.error {
+    color: $error;
+  }
 }
