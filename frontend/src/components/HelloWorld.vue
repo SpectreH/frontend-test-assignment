@@ -7,21 +7,30 @@
     
     <div style="width: 380px; display: grid; gap: 20px">
       <div>
-        <div class="input-group" error="true">
+        <div class="input-group upload" error="true">
           <button type="button" upload>Upload</button>
           <input placeholder="Upload your photo" disabled>
         </div>
         <label class="error-message">Error text</label>
       </div>   
 
-      <div class="input-group" error="false">
+      <div class="input-group upload" error="false">
         <button type="button" upload>Upload</button>
         <input placeholder="Upload your photo"  value="Item" disabled>
-      </div>   
+      </div> 
+
+      <div>
+        <div class="input-group" error="true">
+          <label class="floating-label">Label</label>         
+          <input placeholder="Label">
+        </div>
+        <label class="error-message">Error text</label>              
+      </div>
+        
 
       <input placeholder="Upload your photo">      
     </div>
-        
+
     <p>Normal</p>
   </div>
 </template>

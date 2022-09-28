@@ -41,36 +41,6 @@ button:not([upload]) {
   }  
 }
 
-.input-group {
-  display: flex;
-  width: 100%;
-  height: 54px;
-
-  button[upload] {
-    border: 1px solid rgba(0, 0, 0, 0.87);
-    border-radius: 4px 0px 0px 4px;
-    padding: 0px 15px;
-    background-color: transparent;
-    cursor: pointer;
-  }
-  
-  &>:not(:first-child) {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    border-left: 0px !important;
-
-    &:disabled {
-      color: rgba(0, 0, 0, 0.87);
-    }
-  }
-
-  &[error="true"] {
-    button[upload], input {
-      border: 2px solid $error;
-    }
-  }
-}
-
 input {
   flex: auto;
   padding: 14px 16px 14px 16px;
@@ -81,6 +51,61 @@ input {
   &:focus-visible {
     outline: none;
   }
+}
+
+.input-group {
+  display: flex;
+  width: 100%;
+  height: 54px;
+
+  &.upload {
+    button[upload] {
+      border: 1px solid rgba(0, 0, 0, 0.87);
+      border-radius: 4px 0px 0px 4px;
+      padding: 0px 15px;
+      background-color: transparent;
+      cursor: pointer;
+    }
+    
+    &>:not(:first-child) {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      border-left: 0px !important;
+
+      &:disabled {
+        color: rgba(0, 0, 0, 0.87);
+      }
+    }  
+  }
+
+  label.floating-label {
+    position: absolute;
+    right: auto;
+    transform: translate3d(12px, -13px, 0px) scale(.75);
+    z-index: 3
+  }
+
+  label.floating-label::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    background: #fff;
+    height: 8px;
+    top: 40%;
+    left: -4px;
+    right: -4px;
+    z-index: -1;
+  }
+
+  &[error="true"] {
+    label {
+      color: $error;
+    }
+
+    button[upload], input {
+      border: 2px solid $error;
+    }
+  }  
 }
 
 .error-message {
