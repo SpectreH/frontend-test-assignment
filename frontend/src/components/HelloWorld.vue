@@ -34,6 +34,29 @@
       </div>   
     </div>
 
+    <div class="profile-image">
+      <img src="../assets/photo-cover.svg" height="70" width="70">
+    </div>
+
+    <div class="tooltip">MaximilianMaximilian@gmail.com
+      <span class="tooltiptext">MaximilianMaximilian@gmail.com</span>
+    </div>
+
+    <div class="spinner"></div>
+
+
+    <label class="b-contain">
+      <span>This is a radio</span>
+      <input name="radio" type="radio" />
+      <div class="b-input"></div>
+    </label>
+    <label class="b-contain">
+      <span>This is a radio</span>
+      <input name="radio" type="radio" />
+      <div class="b-input"></div>
+    </label>
+
+
     <p>Normal</p>
   </div>
 </template>
