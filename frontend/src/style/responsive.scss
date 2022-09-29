@@ -2,11 +2,35 @@
   header .header-content {
     padding: 0 60px;
   }
+
+  .card {
+    width: 282px;
+  }
+}
+
+@media (max-width: 932px) {
+  .card {
+    width: 344px;
+  }
+
+  .main-people-list {
+    gap: 16px!important;
+  }
 }
 
 @media (max-width: 768px) {
   header .header-content {
     padding: 0 32px;
+  }
+}
+
+@media (max-width: 720px) {
+  .card {
+    width: 328px;
+  }
+
+  .main-people-list {
+    gap: 20px !important;
   }
 }
 

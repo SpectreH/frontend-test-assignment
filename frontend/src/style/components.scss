@@ -17,7 +17,15 @@
 .tooltip {
   cursor: pointer;
   position: relative;
-  display: flex;
+  display: inline-grid;
+}
+
+.tooltip .tooltip-main-text {
+  width: inherit;
+  overflow: hidden;
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .tooltip .tooltiptext {
@@ -29,9 +37,12 @@
   border-radius: 4px;
   padding: 3px 16px;
   top: 35px;
-  margin-left: 77px;
+  inline-size: max-content;
+  margin-left: -15px;
   position: absolute;
   z-index: 1;
+  word-wrap: break-word;
+  max-width: 250px;
 }
 
 .tooltip:hover .tooltiptext {

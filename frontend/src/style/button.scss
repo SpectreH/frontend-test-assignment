@@ -1,7 +1,8 @@
 // Button styles (+ disabled) 
 
 button:not([upload]) {
-  width: 100px;
+  min-width: 100px;
+  padding: 0 17px 0 17px;
   height: 34px;
   border-radius: 80px;
   background-color: $yellow;
