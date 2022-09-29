@@ -1,0 +1,68 @@
+// Radio button style
+.radio-input-group {
+  display: grid;
+  gap: 7px;
+
+  .radio-container {
+    display: inline;
+    position: relative;
+    padding-left: 32px;
+    cursor: pointer;
+  }
+
+  .radio-container input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+}
+
+.radio-container input[type="radio"]~.b-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background: #fff;
+  transition: background 250ms;
+  border: 1px solid #D0CFCF;
+  border-radius: 3rem;
+}
+
+.radio-container input[type="radio"]~.b-input::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 4px;
+  top: 4px;
+  width: 10px;
+  height: 10px;
+  border-radius: 3rem;
+  background: #00BDD3;
+  transition: background 250ms;
+}
+
+.radio-container input:checked~.b-input::after {
+  display: block;
+}
+
+.radio-container:hover input[type="radio"]:not([disabled])~.b-input,
+.radio-container input[type="radio"]:focus~.b-input {
+  background: #fff;
+  border-color: #D0CFCF;
+}
+
+.radio-container input[type="radio"]:checked~.b-input {
+  background: #fff;
+  border-color: #00BDD3;
+}
+
+.radio-container input[type="radio"]:disabled~.b-input::after {
+  background: #fff;
+}
+
+.radio-container:hover input[type="radio"]:not([disabled]):checked~.b-input,
+.radio-container input[type="radio"]:checked:focus~.b-input {
+  background: #fff;
+  border-color: #00BDD3;
+}

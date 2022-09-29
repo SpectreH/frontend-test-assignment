@@ -45,17 +45,22 @@
     <div class="spinner"></div>
 
 
-    <label class="b-contain">
-      <span>This is a radio</span>
-      <input name="radio" type="radio" />
-      <div class="b-input"></div>
-    </label>
-    <label class="b-contain">
-      <span>This is a radio</span>
-      <input name="radio" type="radio" />
-      <div class="b-input"></div>
-    </label>
-
+    <div class="radio-input-group" style="display: grid; gap: 7px">
+      <div>
+        <label class="radio-container">
+          <span>Checked</span>
+          <input name="radio" type="radio" />
+          <div class="b-input"></div>
+        </label>
+      </div>
+      <div>
+        <label class="radio-container">
+          <span>Unchecked</span>
+          <input name="radio" type="radio" />
+          <div class="b-input"></div>
+        </label>
+      </div>
+    </div>
 
     <p>Normal</p>
   </div>

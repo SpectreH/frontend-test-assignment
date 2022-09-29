@@ -1,0 +1,85 @@
+// Profile image circle style
+.profile-image {
+  height: 70px;
+  width: 70px;
+
+  img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+}
+
+
+// Tooltip style
+.tooltip {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: fit-content;
+  background-color: rgba(0, 0, 0, 0.87);
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  padding: 3px 16px;
+  top: 35px;
+  margin-left: 77px;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+
+// Preloader UI style
+$spinner-width: 4px;
+
+.spinner {
+  border-width: $spinner-width;
+  border-style: solid;
+  border-color: $blue $blue $blue transparent;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  animation: spin 1.5s linear infinite;
+  position: relative;
+
+  &:before,
+  &:after {
+    content: '';
+    width: $spinner-width;
+    height: $spinner-width;
+    border-radius: 50%;
+    background: $blue;
+    position: absolute;
+    left: $spinner-width;
+  }
+
+  &:before {
+    top: 3px;
+    left: 2px;
+  }
+
+  &:after {
+    bottom: 2px;
+    left: 3px;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
