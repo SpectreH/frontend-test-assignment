@@ -18,6 +18,7 @@ export default {
 
 <style lang="scss" scoped>
   header {
+    background-color: #fff;
     justify-content: center;
     width: 100%;
     height: 60px;

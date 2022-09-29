@@ -16,3 +16,38 @@
     gap: 12px;
   }
 }
+
+@media (max-width: 359px) {
+  header {
+    height: 36px!important;
+    .header-content {
+      padding: 0!important;
+    }
+
+    .header-buttons {
+      gap: 0!important;
+    }
+  }
+}
+
+
+@media (max-width: 380px) {
+  .nav-content {
+    margin: 40px 16px 71px 16px !important;
+  }
+}
+
+
+@media (max-width: 800px) {
+  nav {
+    min-height: 500px;
+    background-position: 60% 76%!important;
+  }
+}
+
+
+@media (min-width: 800px) {
+  nav {
+    height: 650px;
+  }
+}
